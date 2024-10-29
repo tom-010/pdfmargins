@@ -4,12 +4,12 @@ import os
 
 
 def test_e2e():
-    pdf_path = Path("test/test_data/in_margins.pdf")
+    pdf_path = Path("test/test_data/in.margins.pdf")
     pdf_path.unlink(missing_ok=True)
 
     os.system("./scripts/example_usage.sh")
 
-    pdf_path = Path("test/test_data/in_margins.pdf")
+    pdf_path = Path("test/test_data/in.margins.pdf")
     assert pdf_path.exists(), f"File {pdf_path} does not exist"
 
     reader = PdfReader(str(pdf_path))
