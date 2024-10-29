@@ -11,12 +11,15 @@ python = "^3.11"
 click = "^8.1.7"
 tqdm = "^4.66.5"
 pypdf = "^5.1.0"
+
+
+[tool.poetry.group.app.dependencies]
 gradio = "^5.4.0"
 
 
 [tool.poetry.group.api.dependencies]
 fastapi = "^0.115.4"
-uvicorn = "^0.32.0"
+uvicorn = "^0.32.0" # this requires numpy, which requires ninja and gcc
 
 [tool.poetry.group.all.dependencies]
 fastapi = "^0.115.4"
