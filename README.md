@@ -27,6 +27,52 @@ After:
 ![after](docs/after.png)
 
 
+```markdown
+## Installation
+
+To install the `pdfmargins` package, use one of the following commands:
+
+**CLI Only**:
+If you only need the command-line interface, run:
+```bash
+pip3 install pdfmargins
+```
+
+**CLI + Gradio App**:
+If you want to include the Gradio app as well, use:
+```bash
+poetry install pdfmargins[app]
+```
+
+**CLI + FastAPI API**:
+To include the FastAPI API, run:
+```bash
+poetry install pdfmargins[api]
+```
+
+**All Components (CLI, Gradio App, FastAPI API)**:
+If you want to install everything, use:
+```bash
+poetry add pdfmargins[all]
+```
+
+**From within the project**:
+If you cloned the project, run in the project root:
+```bash
+poetry install --with all
+```
+
+
+### Verifying the Installation
+
+To verify that the installation was successful, you can run the CLI command:
+```bash
+pdfmargins --help
+pdfmargins-app --help # if installed
+pdfmargins-api --help # if installed
+```
+This should display the help information for the command-line interface.
+
 ## Usage
 
 See `scripts/example_usage.sh` for a runnable script, that is also

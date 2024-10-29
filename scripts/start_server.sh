@@ -1,0 +1,1 @@
+uvicorn pdfmargins.api:app

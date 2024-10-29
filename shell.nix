@@ -13,6 +13,8 @@ pkgs.mkShell {
     tmux
     vscode
     zlib.dev
+    stdenv.cc.cc.lib
+    ninja
   ];
 
   shellHook = ''
@@ -26,8 +28,7 @@ pkgs.mkShell {
     # Setup the environment =========================================
     
     ## gcc, c and c++ libraries
-    export LD_LIBRARY_PATH="${pkgs.gcc}/lib:${pkgs.gcc}/lib64:${pkgs.zlib}/lib:$LD_LIBRARY_PATH"
-
+    export LD_LIBRARY_PATH=${pkgs.gcc}/lib:${pkgs.gcc}/lib64:${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.zlib}/lib:$LD_LIBRARY_PATH
 
 
     # Initialize tmux =============================================== 
