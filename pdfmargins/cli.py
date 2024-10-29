@@ -51,7 +51,7 @@ def cli(
     # If it's a file, apply margins and add blank pages to the single file
     if input_file_or_dir.is_file():
         file = input_file_or_dir
-        target = file.with_name(f"{file.stem}_margins{file.suffix}")
+        target = file.with_name(f"{file.stem}.margins{file.suffix}")
         add_margins(
             file,
             target,
@@ -66,14 +66,14 @@ def cli(
     else:
         # Collect all PDF files in the directory, excluding files already processed
         files = [
-            f for f in input_file_or_dir.rglob("*.pdf") if "_margins" not in file.stem
+            f
+            for f in input_file_or_dir.rglob("*.pdf")
+            if not file.name.endswith(".margins.pdf")
         ]
 
         # Progress bar to track processing of multiple files
         for file in tqdm(files):
-            if "_margins" in file.stem:
-                continue
-            target = file.with_name(f"{file.stem}_margins{file.suffix}")
+            target = file.with_name(f"{file.stem}.margins{file.suffix}")
             add_margins(
                 file,
                 target,

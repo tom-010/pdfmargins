@@ -1,5 +1,5 @@
-Make space for Notes on PDF
-===========================
+Add margins to PDFs
+===================
 
 I have a tablet with a pen as ebook-reader. 
 I like to make notes on the side of the PDFs when reading. 
@@ -9,14 +9,14 @@ I also like to draw diagrams and notes on the PDF.
 There is not enough space at the top and bottom. 
 This leads to bad nodes and diagrams I can not decypher later.
 
-This tool adds margins left and right of the text and adds 
-blank pages between each page. With this I have enough space
-for my thoughts and ideas and space to learn.
+This tool adds margins around the text. With this I have enough 
+space for my thoughts and ideas and space to learn.
 
 # Features
 
-* Add margins left and right of the document
-* Add a blank page after each page in the PDF
+- Add marigins around the text 
+- Fixed points as margin (e.g. 100)
+- Relative margin (e.g. `left=0.3`)
 
 Before:
 
@@ -47,7 +47,7 @@ python3 cli.py path/to/dir/with/pdfs/
 ```
 
 If there is a `path/to/dir/with/pdfs/a.pdf` there is now a 
-`path/to/dir/with/pdfs/a_margins.pdf` as output.
+`path/to/dir/with/pdfs/a.margins.pdf` as output.
 
 If you want to know more, check
 
