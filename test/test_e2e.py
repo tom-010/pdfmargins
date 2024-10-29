@@ -1,5 +1,5 @@
 from pathlib import Path
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 import os
 
 
@@ -20,45 +20,45 @@ def test_e2e():
     expected = [
         {
             "Page": 1,
-            "Width (pts)": 896,
-            "Height (pts)": 1198,
-            "Number of characters": 5403,
+            "Width (pts)": 896.0,
+            "Height (pts)": 1198.0,
+            "Number of characters": 5444,
         },
         {
             "Page": 2,
-            "Width (pts)": 896,
-            "Height (pts)": 1198,
-            "Number of characters": 5726,
+            "Width (pts)": 896.0,
+            "Height (pts)": 1198.0,
+            "Number of characters": 5887,
         },
         {
             "Page": 3,
-            "Width (pts)": 896,
-            "Height (pts)": 1198,
-            "Number of characters": 5296,
+            "Width (pts)": 896.0,
+            "Height (pts)": 1198.0,
+            "Number of characters": 5447,
         },
         {
             "Page": 4,
-            "Width (pts)": 896,
-            "Height (pts)": 1198,
-            "Number of characters": 5284,
+            "Width (pts)": 896.0,
+            "Height (pts)": 1198.0,
+            "Number of characters": 5194,
         },
         {
             "Page": 5,
-            "Width (pts)": 896,
-            "Height (pts)": 1198,
-            "Number of characters": 4489,
+            "Width (pts)": 896.0,
+            "Height (pts)": 1198.0,
+            "Number of characters": 4591,
         },
         {
             "Page": 6,
-            "Width (pts)": 896,
-            "Height (pts)": 1198,
-            "Number of characters": 7447,
+            "Width (pts)": 896.0,
+            "Height (pts)": 1198.0,
+            "Number of characters": 7505,
         },
         {
             "Page": 7,
-            "Width (pts)": 896,
-            "Height (pts)": 1198,
-            "Number of characters": 331,
+            "Width (pts)": 896.0,
+            "Height (pts)": 1198.0,
+            "Number of characters": 333,
         },
     ]
 

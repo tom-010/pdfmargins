@@ -38,7 +38,7 @@ Common use-case is to run
 python3 cli.py path/to/pdf-file.pdf
 ```
 
-This creates a file called `path/to/pdf-file_margins.pdf` as output.
+This creates a file called `path/to/pdf-file.margins.pdf` as output.
 
 Or you can process a directory via 
 
@@ -79,5 +79,4 @@ If you nee to know details, check out `pdfmargins/cli.py`. It is pretty straight
 
 This is just a wrapper around 
 
-* pdfcropmargins  
-* PyPDF2
+* pypdf

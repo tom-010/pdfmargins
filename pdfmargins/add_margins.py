@@ -13,7 +13,7 @@ Usage:
     To use this tool, call the `add_margins` function with the desired parameters.
 """
 
-from PyPDF2 import PdfReader, PdfWriter, Transformation, PageObject
+from pypdf import PdfReader, PdfWriter, Transformation, PageObject
 from tqdm import tqdm
 from pathlib import Path
 import math
